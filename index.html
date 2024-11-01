@@ -3,58 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kehinde Odunuga's Portfolio</title>
+    <title>Kehinde Odunuga - QA Engineer & Web Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <header>
-        <h1>Kehinde Odunuga</h1>
         <nav>
+            <div class="logo">Kehinde Odunuga</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home">
-        <h2>Welcome to My Portfolio</h2>
-        <p>A passionate Software Quality Assurance Engineer with experience leveraging software test engineering (API, Web & Mobile Testing) and test methodologies to deliver highly effective and creative quality solutions to business and technology challenges. 
-          Expertise in manual & automation testing using various tools. Participate in projects where I can apply my knowledge and experience on testing and quality techniques. 
-          Highly organized with a strong capacity to prioritize workload, delegate deliverables, and steer project completion within established deadlines.</p>
-    </section>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="home-content">
+                <h1>Welcome, I'm Kehinde Odunuga</h1>
+                <p>A passionate Software Quality Assurance Engineer with experience leveraging software test engineering (API, Web & Mobile Testing) and test methodologies to deliver highly effective and creative quality solutions to business and technology challenges.</p> 
+                <p>Expertise in manual & automation testing using various tools. Participate in projects where I can apply my knowledge and experience on testing and quality techniques.</p>
+                <p>Highly organized with a strong capacity to prioritize workload, delegate deliverables, and steer project completion within established deadlines.</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/kehinde-odunuga" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/kehinde-odunuga" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Kehinde With over three years in Quality Assurance and a love for backend initiatives, I enjoy testing impactful digital solutions.</p>
-    </section>
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>QA Skills</h3>
+                    <ul>
+                        <li>Manual Testing</li>
+                        <li>Automated Testing</li>
+                        <li>Selenium</li>
+                        <li>Postman API</li>
+                        <li>Appium</li>
+                        <li>JIRA</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Development Skills</h3>
+                    <ul>
+                        <li>Backend Development</li>
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>QA Automation Project</li>
-            <li>Personal Portfolio Website</li>
-            <li>Backend Development Project</li>
-        </ul>
-    </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Fintech Payment Automation</h3>
+                    <p>Developed comprehensive test automation suite for payment processing system</p>
+                    <div class="project-tools">
+                        <span>Selenium</span>
+                        <span>Java</span>
+                        <span>TestNG</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>EdTech Platform Testing</h3>
+                    <p>Implemented end-to-end testing strategy for online learning management system</p>
+                    <div class="project-tools">
+                        <span>Cypress</span>
+                        <span>JavaScript</span>
+                        <span>JIRA</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>Responsive personal portfolio showcasing professional skills and projects</p>
+                    <div class="project-tools">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="form-confirmation" class="hidden">
+                Thanks for your message! I'll get back to you soon.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Kehinde Odunuga. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
