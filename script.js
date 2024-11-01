@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
-    const contactForm = document.getElementById('contact-form');
-    const formConfirmation = document.getElementById('form-confirmation');
+
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.classList.toggle('dark-mode', savedTheme === 'dark');
 
     // Theme Toggle
     themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        document.documentElement.setAttribute('data-theme', 
-            currentTheme === 'dark' ? 'light' : 'dark'
-        );
+        document.body.classList.toggle('dark-mode');
+        
+        // Save theme preference
+        const newTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', newTheme);
     });
 
     // Smooth Scrolling
@@ -22,10 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    const formConfirmation = document.getElementById('form-confirmation');
+
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // In a real-world scenario, you'd send this data to a backend
+        // Simulated form submission
         contactForm.reset();
         formConfirmation.classList.remove('hidden');
         
